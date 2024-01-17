@@ -1,25 +1,41 @@
 <template>
     <div>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <Header />
+        <TheHeader />
         <Nuxt />
-        <Footer />
+        <TheFooter />
     </div>
 </template>
   
 <script>
+import TheHeader from "~/components/TheHeader";
+import TheFooter from "~/components/TheFooter";
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  },
+};
 </script>
 
 <style>
 body {
   font-family: Manrope;
   background: var(--Dark-03, #070708);
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  color: white;
   line-height: 27px;
   flex-shrink: 0;
+  /* margin:auto; */
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  body{
+    font-size: 18px;
+  }
 }
 </style>
