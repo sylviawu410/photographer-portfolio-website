@@ -28,6 +28,34 @@
         <h1>Work Together</h1>
       </div>
     </div>
+    <div class="scroll-container">
+      <div class="scroll-text">
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Comercial Photography</span>
+        </div>
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Product Photography</span>
+        </div>
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Wedding Photography</span>
+        </div>
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Landscape Photography</span>
+        </div>
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Branding Photography</span>
+        </div>
+        <div class="scroll-item">
+          <img src="~assets/image/star.svg">
+          <span>Portrait  Photography</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -106,6 +134,59 @@ export default {
     position: absolute;
     top: 16px;
     left: 40px;
+  }
+
+  .home .scroll-container {
+    overflow: hidden;
+    padding: 16px;
+    border-top: 1px solid var(--Dark-12, #1C1C21);
+    border-bottom: 1px solid var(--Dark-12, #1C1C21);
+    background: var(--Dark-06, #0E0E10);
+    
+  }
+
+  .home .scroll-text {
+    font-size: 14px;
+    display: flex;
+    gap: 16px;
+
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+
+  .home .scroll-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .home .scroll-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .home .scroll-item span {
+    text-align: center;
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+
+    to {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(-100%);
+    }
+
   }
 }
 </style>
