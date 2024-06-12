@@ -33,7 +33,7 @@ export default {
     margin-block-start: 0;
     margin-block-end: 0;
   }
-  
+
   h1 {
     color: var(--Absolute-White, #FFF);
     font-size: 49px;
@@ -52,7 +52,13 @@ export default {
 
 @media screen and (min-width: 1440px) {
   body {
-    font-size: 18px;
+    color: var(--Grey-70, #AFB0B6);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
   }
 }
 </style>
