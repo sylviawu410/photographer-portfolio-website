@@ -57,7 +57,12 @@
       </div>
     </div>
     <div class="section2">
-      <img class="section2img" src="~assets/image/section2.png">
+      <img class="img1" src="~assets/image/section2-blue.png">
+      <img class="img2" src="~assets/image/section2-green.png">
+      <img class="img3" src="~assets/image/section2-yellow.png">
+      <img class="img4" src="~assets/image/section2-red.png">
+      <img class="img5" src="~assets/image/section2-white.png">
+      <img class="img6" src="~assets/image/section2-black.png">
     </div>
     <div class="section3">
       <div class="top">
@@ -80,7 +85,8 @@
             <div class="text">My journey as a photographer has been a lifelong quest to capture the extraordinary in the
               ordinary, to freeze fleeting moments in time, and to share the world's beauty as I see it. Based in the
               enchanting landscapes of the USA, I find inspiration in every corner of this diverse and vibrant country.
-              Join me as we embark on a visual odyssey, where each photograph tells a story, and every frame is a piece of
+              Join me as we embark on a visual odyssey, where each photograph tells a story, and every frame is a piece
+              of
               my heart.</div>
           </div>
           <div class="container2">
@@ -122,57 +128,130 @@
           <div class="subtitle">Services</div>
           <h1>My Photography Services</h1>
         </div>
-        <nuxt-link to="/services">
-          <div class="service-btn">View All Services -></div>
-        </nuxt-link>
+        <div class="btn-container">
+          <div class="small-btn-container">
+            <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
+            <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
+          </div>
+          <nuxt-link to="/services">
+            <div class="service-btn">View All Services -></div>
+          </nuxt-link>
+        </div>
       </div>
       <div class="bottom">
-        <img class="pic" src="~assets/image/seflpic.png">
         <div class="bottom-right">
           <div class="container1">
-            <div class="subcontainer">
-              <img class="star" src="~assets/image/star2.svg">
-              <div class="title">Introduction</div>
-            </div>
-            <div class="text">My journey as a photographer has been a lifelong quest to capture the extraordinary in the
-              ordinary, to freeze fleeting moments in time, and to share the world's beauty as I see it. Based in the
-              enchanting landscapes of the USA, I find inspiration in every corner of this diverse and vibrant country.
-              Join me as we embark on a visual odyssey, where each photograph tells a story, and every frame is a piece of
-              my heart.</div>
+            <h2>Events</h2>
+            <img class="purple-btn" src="~assets/image/button.svg">
           </div>
+          <div class="text">Our event photography service is dedicated to capturing the magic of your special occasions.
+            Whether it's a wedding, corporate event, or milestone celebration, we're there to document every heartfelt
+            moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the
+            day.</div>
+
+          <h3>Service Highlights</h3>
           <div class="container2">
             <div class="subcontainer">
-              <img class="star" src="~assets/image/star2.svg">
-              <div class="title">Contact Information</div>
+              <img class="dark-star" src="~assets/image/dark-star.svg">
+              <div class="highlights">Coverage for weddings, parties, corporate functions, and more.</div>
             </div>
-            <div class="contact-container">
-              <div class="text-container">
-                <div class="email">Email</div>
-                <div class="info">damienbraun@gmail.com</div>
-              </div>
-              <div class="text-container">
-                <div class="phone">Phone Number</div>
-                <div class="info">+00 000000000</div>
-              </div>
+            <div class="subcontainer">
+              <img class="dark-star" src="~assets/image/dark-star.svg">
+              <div class="highlights">Skilled photographers who know how to seize the moment.</div>
             </div>
-            <div class="btn-container">
-              <div class="logo-wrapper">
-                <img class="logo" src="~assets/image/facebook.png" />
-                <img class="logo" src="~assets/image/twitter.png" />
-                <img class="logo" src="~assets/image/linkedin.png" />
-              </div>
-              <div class="btn-wrapper">
-                <nuxt-link to="services">
-                  <div class="lets-work-btn">Let’s Work</div>
-                </nuxt-link>
-                <div class="CV-btn">Download CV</div>
-              </div>
-
+            <div class="subcontainer">
+              <img class="dark-star" src="~assets/image/dark-star.svg">
+              <div class="highlights">A mix of candid and posed shots for a comprehensive story.</div>
+            </div>
+            <div class="subcontainer">
+              <img class="dark-star" src="~assets/image/dark-star.svg">
+              <div class="highlights">Quick turnaround for you to relive the day's highlights.</div>
             </div>
           </div>
         </div>
+        <img class="pic" src="~assets/image/servicePic.png">
       </div>
-      
+    </div>
+
+    <div class="section5">
+      <div class="top">
+        <div class="top-title">
+          <div class="subtitle">Portfolio</div>
+          <h1>Explore My photography work.</h1>
+        </div>
+        <div class="btn-container">
+          <div class="small-btn-container">
+            <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
+            <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
+          </div>
+          <nuxt-link to="/portfolio">
+            <div class="work-btn">View All Works -></div>
+          </nuxt-link>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="card">
+          <img class="card-pic" src="~assets/image/work1.png">
+          <div class="container">
+            <div class="subcontainer1">
+              <div class="card-title">Faces of Resilience</div>
+              <div class="card-date">March 2022</div>
+            </div>
+            <div class="subcontainer2">
+              <div class="detail">View Project</div>
+              <img class="arrow" src="~assets/image/arrow.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-pic" src="~assets/image/work2.png">
+          <div class="container">
+            <div class="subcontainer1">
+              <div class="card-title">A Wedding Tale</div>
+              <div class="card-date">January 2020</div>
+            </div>
+            <div class="subcontainer2">
+              <div class="detail">View Project</div>
+              <img class="arrow" src="~assets/image/arrow.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-pic" src="~assets/image/work3.png">
+          <div class="container">
+            <div class="subcontainer1">
+              <div class="card-title">Product Elegance</div>
+              <div class="card-date">January 2020</div>
+            </div>
+            <div class="subcontainer2">
+              <div class="detail">View Project</div>
+              <img class="arrow" src="~assets/image/arrow.png">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section6">
+      <div class="top">
+        <div class="top-title">
+          <div class="subtitle">FAQ’s</div>
+          <h1>Frequently Asked Questions</h1>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <div class="FAQitem">
+            <div class="question">What type of photography do you specialize in?
+            </div>
+            <div class="answer">I specialize in [Portrait, Landscape, Event, etc.] photography, capturing moments that tell unique stories.</div>
+            <img class="arrow" src="~assets/image/arrow-upper.png">
+          </div>
+        </div>
+        <div class="container"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -188,6 +267,7 @@ export default {
   .home {
     /* margin-top: 300px; */
     margin-bottom: 200px;
+    width: 100%;
 
   }
 
@@ -307,16 +387,56 @@ export default {
   .home .section2 {
     display: flex;
     padding: 0px 80px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
+    height: 424px;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 
-  .home .section2img {
+  .home .section2 .img1 {
     width: 417.043px;
     height: 293.156px;
     flex-shrink: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .home .section2 .img2 {
+    width: 136.341px;
+    height: 118.422px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .home .section2 .img3 {
+    width: 462.757px;
+    height: 293.156px;
+    position: absolute;
+    left: 228.37px;
+    bottom: 0;
+  }
+
+  .home .section2 .img4 {
+    width: 523.709px;
+    height: 424px;
+    position: relative;
+    left: 16.04px;
+  }
+
+  .home .section2 .img5 {
+    width: 312.782px;
+    height: 242.641px;
+    position: absolute;
+    left: 1047.22px;
+  }
+
+  .home .section2 .img6 {
+    width: 312.782px;
+    height: 169.766px;
+    position: absolute;
+    bottom: 0;
+    left: 1047.22px;
   }
 
   .home .section3 {
@@ -328,7 +448,10 @@ export default {
     gap: 60px;
   }
 
-  .home .section3 .top, .home .section4 .top {
+  .home .section3 .top,
+  .home .section4 .top,
+  .home .section5 .top,
+  .home .section6 .top {
     display: flex;
     padding-bottom: 40px;
     align-items: center;
@@ -338,7 +461,10 @@ export default {
 
   }
 
-  .home .section3 .subtitle, .home .section4 .subtitle {
+  .home .section3 .subtitle,
+  .home .section4 .subtitle,
+  .home .section5 .subtitle,
+  .home .section6 .subtitle {
     color: var(--Grey-50, #797C86);
     font-size: 16px;
     font-weight: 600;
@@ -346,7 +472,9 @@ export default {
     text-transform: uppercase;
   }
 
-  .home .section3 .know-more-btn, .home .section4 .service-btn {
+  .home .section3 .know-more-btn,
+  .home .section4 .service-btn,
+  .home .section5 .work-btn {
     display: flex;
     padding: 14px 20px;
     align-items: center;
@@ -361,7 +489,7 @@ export default {
     cursor: pointer;
   }
 
-  .home .section3 .bottom, .home .section4 .bottom {
+  .home .section3 .bottom {
     display: flex;
     gap: 20px;
   }
@@ -494,13 +622,236 @@ export default {
     font-size: 14px;
   }
 
-  .home .section4{
+  .home .section4,
+  .home .section5,
+  .home .section6 {
     display: flex;
     width: 1280px;
     flex-direction: column;
     align-items: flex-start;
     margin: 150px auto 0 auto;
     gap: 60px;
+  }
+
+  .home .section4 .top .btn-container,
+  .home .section5 .top .btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+  }
+
+  .home .section4 .top .small-btn-container,
+  .home .section5 .top .small-btn-container {
+    display: flex;
+    padding: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    border-radius: 100px;
+    border: 1px solid var(--Dark-12, #1C1C21);
+    background: var(--Dark-03, #070708);
+  }
+
+  .home .section4 .left-arrow-btn,
+  .home .section4 .right-arrow-btn,
+  .home .section5 .left-arrow-btn,
+  .home .section5 .right-arrow-btn {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #2F2F37;
+    background: var(--Dark-12, #1C1C21);
+    width: 28px;
+    height: 28px;
+  }
+
+  .home .section4 .pic {
+    height: 562px;
+    flex: 1 0 0;
+    border-radius: 20px 20px 20px 100px;
+  }
+
+  .home .section4 .bottom {
+    display: flex;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .home .section4 .bottom-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    max-width: 620px;
+  }
+
+  .home .section4 h2 {
+    color: var(--Grey-50, #797C86);
+    font-family: Manrope;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .home .section4 .container1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .home .section4 .purple-btn {
+    margin: 0 0 0 10px;
+  }
+
+  .home .section4 .text {
+    color: var(--Grey-50, #797C86);
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  .home .section4 h3 {
+    color: var(--Grey-80, #CACACE);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  .home .section4 .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .home .section4 .subcontainer {
+    display: flex;
+    padding: 16px 18px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid var(--Dark-12, #1C1C21);
+  }
+
+  .home .section4 .dark-star {
+    width: 30px;
+    height: 30px;
+  }
+
+  .home .section4 .highlights {
+    color: var(--Grey-70, #AFB0B6);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    text-transform: uppercase;
+  }
+
+  .home .section5 .bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  .home .section5 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+  }
+
+  .home .section5 .card-pic {
+    height: 428px;
+  }
+
+  .home .section5 .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: space-between;
+    align-self: stretch;
+
+  }
+
+  .home .section5 .subcontainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .home .section5 .subcontainer2 {
+    display: flex;
+    padding: 4px 0px;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .home .section5 .card-title {
+    color: var(--Grey-80, #CACACE);
+    font-size: 18px;
+  }
+
+  .home .section5 .card-date {
+    color: var(--Grey-50, #797C86);
+  }
+
+  .home .section5 .detail {
+    color: var(--Grey-95, #F2F2F3);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .home .section5 .arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .home .section6 .bottom {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .home .section6 .container {
+    display: flex;
+    padding: 30px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .home .section6 .FAQitem {
+    display: flex;
+    padding: 24px 40px;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  .home .section6 .question {
+    color: var(--Grey-70, #AFB0B6);
+    font-size: 18px;
+    text-transform: uppercase;
+
+  }
+
+  .home .section6 .answer {
+    color: var(--Grey-50, #797C86);
+    font-size: 16px;
   }
 }
 </style>
