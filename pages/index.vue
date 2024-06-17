@@ -60,18 +60,18 @@
       <img class="section2img" src="~assets/image/section2.png">
     </div>
     <div class="section3">
-      <div class="section3-top">
-        <div class="section3-top-title">
-          <div class="section3-subtitle">About</div>
+      <div class="top">
+        <div class="top-title">
+          <div class="subtitle">About</div>
           <h1>I am Damien</h1>
         </div>
         <nuxt-link to="/about-me">
           <div class="know-more-btn">Know More -></div>
         </nuxt-link>
       </div>
-      <div class="section3-bottom">
-        <img class="section3-pic" src="~assets/image/seflpic.png">
-        <div class="section3-bottom-right">
+      <div class="bottom">
+        <img class="pic" src="~assets/image/seflpic.png">
+        <div class="bottom-right">
           <div class="container1">
             <div class="subcontainer">
               <img class="star" src="~assets/image/star2.svg">
@@ -115,8 +115,64 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="section4">
+      <div class="top">
+        <div class="top-title">
+          <div class="subtitle">Services</div>
+          <h1>My Photography Services</h1>
+        </div>
+        <nuxt-link to="/services">
+          <div class="service-btn">View All Services -></div>
+        </nuxt-link>
+      </div>
+      <div class="bottom">
+        <img class="pic" src="~assets/image/seflpic.png">
+        <div class="bottom-right">
+          <div class="container1">
+            <div class="subcontainer">
+              <img class="star" src="~assets/image/star2.svg">
+              <div class="title">Introduction</div>
+            </div>
+            <div class="text">My journey as a photographer has been a lifelong quest to capture the extraordinary in the
+              ordinary, to freeze fleeting moments in time, and to share the world's beauty as I see it. Based in the
+              enchanting landscapes of the USA, I find inspiration in every corner of this diverse and vibrant country.
+              Join me as we embark on a visual odyssey, where each photograph tells a story, and every frame is a piece of
+              my heart.</div>
+          </div>
+          <div class="container2">
+            <div class="subcontainer">
+              <img class="star" src="~assets/image/star2.svg">
+              <div class="title">Contact Information</div>
+            </div>
+            <div class="contact-container">
+              <div class="text-container">
+                <div class="email">Email</div>
+                <div class="info">damienbraun@gmail.com</div>
+              </div>
+              <div class="text-container">
+                <div class="phone">Phone Number</div>
+                <div class="info">+00 000000000</div>
+              </div>
+            </div>
+            <div class="btn-container">
+              <div class="logo-wrapper">
+                <img class="logo" src="~assets/image/facebook.png" />
+                <img class="logo" src="~assets/image/twitter.png" />
+                <img class="logo" src="~assets/image/linkedin.png" />
+              </div>
+              <div class="btn-wrapper">
+                <nuxt-link to="services">
+                  <div class="lets-work-btn">Let’s Work</div>
+                </nuxt-link>
+                <div class="CV-btn">Download CV</div>
+              </div>
 
-
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -272,7 +328,7 @@ export default {
     gap: 60px;
   }
 
-  .home .section3-top {
+  .home .section3 .top, .home .section4 .top {
     display: flex;
     padding-bottom: 40px;
     align-items: center;
@@ -282,7 +338,7 @@ export default {
 
   }
 
-  .home .section3-subtitle {
+  .home .section3 .subtitle, .home .section4 .subtitle {
     color: var(--Grey-50, #797C86);
     font-size: 16px;
     font-weight: 600;
@@ -290,7 +346,7 @@ export default {
     text-transform: uppercase;
   }
 
-  .home .know-more-btn {
+  .home .section3 .know-more-btn, .home .section4 .service-btn {
     display: flex;
     padding: 14px 20px;
     align-items: center;
@@ -305,24 +361,25 @@ export default {
     cursor: pointer;
   }
 
-  .home .section3-bottom {
+  .home .section3 .bottom, .home .section4 .bottom {
     display: flex;
     gap: 20px;
   }
 
-  .home .section3-pic {
+  .home .section3 .pic {
     height: 585px;
     flex: 1 0 0;
   }
 
-  .home .section3-bottom-right {
+  .home .section3 .bottom-right {
+    width: 630px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 0;
   }
 
-  .home .section3-bottom-right .container1 {
+  .home .section3 .bottom-right .container1 {
     display: flex;
     padding: 30px;
     flex-direction: column;
@@ -331,19 +388,19 @@ export default {
     align-self: stretch;
   }
 
-  .home .section3-bottom-right .subcontainer {
+  .home .section3 .bottom-right .subcontainer {
     display: flex;
     align-items: flex-end;
     gap: 6px;
     align-self: stretch;
   }
 
-  .section3-bottom-right .star {
+  .section3 .bottom-right .star {
     width: 29.25px;
     height: 30px;
   }
 
-  .section3-bottom-right .title {
+  .section3 .bottom-right .title {
     flex: 1 0 0;
     color: var(--Grey-80, #CACACE);
     font-size: 24px;
@@ -352,11 +409,11 @@ export default {
     line-height: normal;
   }
 
-  .section3-bottom-right .text {
+  .section3 .bottom-right .text {
     align-self: stretch;
   }
 
-  .home .section3-bottom-right .container2 {
+  .home .section3 .bottom-right .container2 {
     display: flex;
     padding: 30px;
     flex-direction: column;
@@ -365,14 +422,14 @@ export default {
     align-self: stretch;
   }
 
-  .home .section3-bottom-right .contact-container {
+  .home .section3 .bottom-right .contact-container {
     display: flex;
     align-items: flex-start;
     gap: 16px;
     align-self: stretch;
   }
 
-  .home .section3-bottom-right .text-container {
+  .home .section3 .bottom-right .text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -380,23 +437,24 @@ export default {
     flex: 1 0 0;
   }
 
-  .home .section3-bottom-right .phone,
-  .home .section3-bottom-right .email {
+  .home .section3 .bottom-right .phone,
+  .home .section3 .bottom-right .email {
     color: var(--Grey-90, #E4E4E6);
   }
 
-  .home .section3-bottom-right .info {
+  .home .section3 .bottom-right .info {
     font-size: 18px;
   }
 
-  .home .section3-bottom-right .btn-container {
+  .home .section3 .bottom-right .btn-container {
     display: flex;
     align-items: center;
     gap: 50px;
     align-self: stretch;
+    justify-content: space-between;
   }
 
-  .home .section3-bottom-right .logo-wrapper {
+  .home .section3 .bottom-right .logo-wrapper {
     display: flex;
     padding: 8px;
     justify-content: flex-end;
@@ -404,7 +462,7 @@ export default {
     gap: 10px;
   }
 
-  .home .section3-bottom-right .logo {
+  .home .section3 .bottom-right .logo {
     width: 16px;
     height: 16px;
     display: flex;
@@ -415,15 +473,15 @@ export default {
     background: var(--Dark-12, #1C1C21);
   }
 
-  .home .section3-bottom-right .btn-wrapper {
+  .home .section3 .bottom-right .btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
   }
 
-  .home .section3-bottom-right .lets-work-btn,
-  .home .section3-bottom-right .CV-btn {
+  .home .section3 .bottom-right .lets-work-btn,
+  .home .section3 .bottom-right .CV-btn {
     display: flex;
     padding: 14px 24px;
     justify-content: center;
@@ -434,7 +492,15 @@ export default {
     background: var(--Dark-12, #1C1C21);
     color: var(--Absolute-White, #FFF);
     font-size: 14px;
-    width: 174px;
+  }
+
+  .home .section4{
+    display: flex;
+    width: 1280px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 150px auto 0 auto;
+    gap: 60px;
   }
 }
 </style>
