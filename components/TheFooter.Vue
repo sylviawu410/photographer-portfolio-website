@@ -1,5 +1,36 @@
 <template>
     <footer class="footer">
+        <div class="logo-container">
+            <img src="~assets/image/Damien.svg">
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-text">
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Comercial Photography</span>
+                </div>
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Product Photography</span>
+                </div>
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Wedding Photography</span>
+                </div>
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Landscape Photography</span>
+                </div>
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Branding Photography</span>
+                </div>
+                <div class="scroll-item">
+                    <img src="~assets/image/star.svg">
+                    <span>Portrait Photography</span>
+                </div>
+            </div>
+        </div>
         <div class="upper-section">
             <div class="background-left"><img src="~assets/image/background.png" /></div>
             <div class="container-left">
@@ -64,7 +95,7 @@
         </div>
     </footer>
 </template>
-  
+
 <style>
 @media screen and (max-width: 992px) {
     .footer {
@@ -74,13 +105,72 @@
 
 @media screen and (min-width: 992px) {
     .footer {
-        /* background-color: bisque; */
         width: 100%;
         bottom: 0;
         position: relative;
-        max-height: 457px;
         z-index: 1;
         overflow: hidden;
+    }
+
+    .footer .logo-container {
+        display: flex;
+        margin-right: 80px;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 60px;
+    }
+
+    .footer .scroll-container {
+        overflow: hidden;
+        padding: 16px;
+        border-top: 1px solid var(--Dark-12, #1C1C21);
+        border-bottom: 1px solid var(--Dark-12, #1C1C21);
+        background: var(--Dark-06, #0E0E10);
+
+    }
+
+    .footer .scroll-text {
+        font-size: 14px;
+        display: flex;
+        gap: 16px;
+
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
+    }
+
+    .footer .scroll-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .footer .scroll-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer .scroll-item span {
+        text-align: center;
+    }
+
+    @keyframes my-animation {
+        from {
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(100%);
+        }
+
+        to {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(-100%);
+        }
+
     }
 
     .footer .upper-section {
