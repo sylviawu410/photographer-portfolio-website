@@ -14,17 +14,17 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/about-me">
+                        <nuxt-link to="/about-me-page">
                             <div class="page-btn">About Me</div>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/portfolio">
+                        <nuxt-link to="/portfolio-page">
                             <div class="page-btn">Portfolio</div>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/services">
+                        <nuxt-link to="/services-page">
                             <div class="page-btn">Services</div>
                         </nuxt-link>
                     </li>

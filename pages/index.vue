@@ -70,7 +70,7 @@
           <div class="subtitle">About</div>
           <h1>I am Damien</h1>
         </div>
-        <nuxt-link to="/about-me">
+        <nuxt-link to="/about-me-page">
           <div class="know-more-btn">Know More -></div>
         </nuxt-link>
       </div>
@@ -111,7 +111,7 @@
                 <img class="logo" src="~assets/image/linkedin.png" />
               </div>
               <div class="btn-wrapper">
-                <nuxt-link to="services">
+                <nuxt-link to="services-page">
                   <div class="lets-work-btn">Let’s Work</div>
                 </nuxt-link>
                 <div class="CV-btn">Download CV</div>
@@ -133,7 +133,7 @@
             <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
             <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
           </div>
-          <nuxt-link to="/services">
+          <nuxt-link to="/services-page">
             <div class="service-btn">View All Services -></div>
           </nuxt-link>
         </div>
@@ -184,7 +184,7 @@
             <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
             <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
           </div>
-          <nuxt-link to="/portfolio">
+          <nuxt-link to="/portfolio-page">
             <div class="work-btn">View All Works -></div>
           </nuxt-link>
         </div>
@@ -323,7 +323,7 @@
             <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
             <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
           </div>
-          <nuxt-link to="/portfolio">
+          <nuxt-link to="/portfolio-page">
             <div class="testimonial-btn">View All Testimonials -></div>
           </nuxt-link>
         </div>
