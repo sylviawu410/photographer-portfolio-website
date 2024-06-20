@@ -1,46 +1,64 @@
 <template>
     <header class="header">
-        <div class="nav-bar">
+      <div class="nav-bar">
+        <li>
+          <nuxt-link to="/">
+            <div class="logo"><img src="~assets/image/logo.png" /></div>
+          </nuxt-link>
+        </li>
+        <li>
+          <ul class="page-btn-container">
             <li>
-                <nuxt-link to="/">
-                    <div class="logo"><img src="~assets/image/logo.png" /></div>
-                </nuxt-link>
+              <nuxt-link to="/">
+                <div :class="getPageButtonClass('/')">Home</div>
+              </nuxt-link>
             </li>
             <li>
-                <ul class="page-btn-container">
-                    <li>
-                        <nuxt-link to="/">
-                            <div class="page-btn">Home</div>
-                        </nuxt-link>
-                    </li>
-                    <li>
-                        <nuxt-link to="/about-me-page">
-                            <div class="page-btn">About Me</div>
-                        </nuxt-link>
-                    </li>
-                    <li>
-                        <nuxt-link to="/portfolio-page">
-                            <div class="page-btn">Portfolio</div>
-                        </nuxt-link>
-                    </li>
-                    <li>
-                        <nuxt-link to="/services-page">
-                            <div class="page-btn">Services</div>
-                        </nuxt-link>
-                    </li>
-                </ul>
+              <nuxt-link to="/about-me-page">
+                <div :class="getPageButtonClass('/about-me-page')">About Me</div>
+              </nuxt-link>
             </li>
             <li>
-                <nuxt-link to="contact-page">
-                    <div class="contact-btn">Contact Me</div>
-                </nuxt-link>
+              <nuxt-link to="/portfolio-page">
+                <div :class="getPageButtonClass('/portfolio-page')">Portfolio</div>
+              </nuxt-link>
             </li>
-
-        </div>
+            <li>
+              <nuxt-link to="/services-page">
+                <div :class="getPageButtonClass('/services-page')">Services</div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <nuxt-link to="contact-page">
+            <div class="contact-btn">Contact Me</div>
+          </nuxt-link>
+        </li>
+      </div>
     </header>
-</template>
-
-<script></script>
+  </template>
+  
+  <script>
+  export default {
+    computed: {
+      currentPagePath() {
+        return this.$route.path;
+      },
+    },
+    methods: {
+      getPageButtonClass(buttonPath) {
+        const cleanedCurrentPath = this.currentPagePath.replace(/^\/+/, '');
+        const cleanedButtonPath = buttonPath.replace(/^\/+/, '');
+  
+        return {
+          'page-btn': true,
+          active: cleanedCurrentPath === cleanedButtonPath,
+        };
+      },
+    },
+  };
+  </script>
 
 <style>
 @media screen and (max-width:992px) {
@@ -138,6 +156,11 @@
         border-radius: 8px;
         border: 1px solid #2F2F37;
         background: var(--Dark-12, #1C1C21);
+    }
+
+    .header .page-btn.active {
+        border: 1px solid var(--Dark-12, #1C1C21);
+        background: var(--Dark-08, #131316);
     }
 }
 
