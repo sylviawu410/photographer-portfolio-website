@@ -243,66 +243,21 @@
       </div>
       <div class="bottom">
         <div class="container">
-          <div class="FAQ-item">
+          <div class="FAQ-item" v-for="(item, index) in FAQ_items.slice(0, 4)" :key="index">
             <div class="FAQ-text">
-              <div class="question">What type of photography do you specialize in?</div>
-              <div class="answer" v-if="showAnswer">I specialize in [Portrait, Landscape, Event, etc.] photography,
-                capturing moments that
-                tell unique stories.</div>
+              <div class="question">{{ item.question }}</div>
+              <div class="answer" v-if="item.showAnswer">{{ item.answer }}</div>
             </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">How can I book a photography session with you?</div>
-              <div class="answer" v-if="showAnswer">text</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">What equipment do you use for your photography?</div>
-              <div class="answer" v-if="showAnswer">text</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">Can I request a specific location?</div>
-              <div class="answer" v-if="showAnswer">text</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
+            <img class="arrow" @click="toggleArrow(index)" :src="item.imageUrl">
           </div>
         </div>
         <div class="container">
-          <div class="FAQ-item">
+          <div class="FAQ-item" v-for="(item, index) in FAQ_items.slice(4, 8)" :key="index">
             <div class="FAQ-text">
-              <div class="question">What is your editing process like?</div>
-              <div class="answer" v-if="showAnswer">text</div>
+              <div class="question">{{ item.question }}</div>
+              <div class="answer" v-if="item.showAnswer">{{ item.answer }}</div>
             </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">Are digital files included in your photography packages?</div>
-              <div class="answer" v-if="showAnswer">text</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">Do you offer prints of your photographs?</div>
-              <div class="answer" v-if="showAnswer">Yes, prints are available for purchase. Explore the 'Prints' section for more details
-                on sizes and pricing.</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
-          </div>
-          <div class="FAQ-item">
-            <div class="FAQ-text">
-              <div class="question">How long does it take to receive the edited photos after a session?</div>
-              <div class="answer" v-if="showAnswer">text</div>
-            </div>
-            <img class="arrow" @click="toggleArrow" :src="imageUrl">
+            <img class="arrow" @click="toggleArrow(index + 4)" :src="item.imageUrl">
           </div>
         </div>
       </div>
@@ -409,19 +364,69 @@ import arrowUpperImage from '@/assets/image/arrow-upper.svg';
 export default {
   data() {
     return {
-      imageUrl: arrowDownImage,
-      showAnswer: false
+      FAQ_items: [
+        {
+          question: 'What type of photography do you specialize in?',
+          answer: 'I specialize in [Portrait, Landscape, Event, etc.] photography, capturing moments that tell unique stories.',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'How can I book a photography session with you?',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'What equipment do you use for your photography?',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'Can I request a specific location for a ',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'What is your editing process like?',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'Are digital files included in your photography packages?',
+          answer: 'Yes, prints are available for purchase. Explore the \'Prints\' section for more details on sizes and pricing.',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'Do you offer prints of your photographs?',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        },
+        {
+          question: 'How long does it take to receive the edited photos after a session?',
+          answer: 'not provided',
+          imageUrl: arrowDownImage,
+          showAnswer: false,
+        }
+
+      ],
+      
     };
   },
   methods: {
-    toggleArrow() {
-      if (this.imageUrl = arrowDownImage) {
-        this.imageUrl = arrowUpperImage;
+    toggleArrow(index) {
+      const item = this.FAQ_items[index];
+      if (item.imageUrl === arrowDownImage) {
+        item.imageUrl = arrowUpperImage;
       } else {
-        this.imageUrl = arrowDownImage;
+        item.imageUrl = arrowDownImage;
       }
-
-      this.showAnswer = !this.showAnswer;
+      item.showAnswer = !item.showAnswer;
     }
   }
 };
@@ -1038,6 +1043,7 @@ export default {
 
   .home .section6 .answer {
     color: var(--Grey-50, #797C86);
+    margin-top: 20px;
     font-size: 16px;
   }
 
