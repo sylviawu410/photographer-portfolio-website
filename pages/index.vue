@@ -130,8 +130,8 @@
         </div>
         <div class="btn-container">
           <div class="small-btn-container">
-            <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
-            <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
+            <img class="arrow-left-btn" src="~assets/image/arrow-left.svg">
+            <img class="arrow-right-btn" src="~assets/image/arrow-right.svg">
           </div>
           <nuxt-link to="/services-page">
             <div class="service-btn">View All Services -></div>
@@ -181,8 +181,8 @@
         </div>
         <div class="btn-container">
           <div class="small-btn-container">
-            <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
-            <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
+            <img class="arrow-left-btn" src="~assets/image/arrow-left.svg">
+            <img class="arrow-right-btn" src="~assets/image/arrow-right.svg">
           </div>
           <nuxt-link to="/portfolio-page">
             <div class="work-btn">View All Works -></div>
@@ -246,62 +246,63 @@
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">What type of photography do you specialize in?</div>
-              <div class="answer">I specialize in [Portrait, Landscape, Event, etc.] photography, capturing moments that
+              <div class="answer" v-if="showAnswer">I specialize in [Portrait, Landscape, Event, etc.] photography,
+                capturing moments that
                 tell unique stories.</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">How can I book a photography session with you?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">What equipment do you use for your photography?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">Can I request a specific location?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
         </div>
         <div class="container">
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">What is your editing process like?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">Are digital files included in your photography packages?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">Do you offer prints of your photographs?</div>
-              <div class="answer">Yes, prints are available for purchase. Explore the 'Prints' section for more details
+              <div class="answer" v-if="showAnswer">Yes, prints are available for purchase. Explore the 'Prints' section for more details
                 on sizes and pricing.</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
           <div class="FAQ-item">
             <div class="FAQ-text">
               <div class="question">How long does it take to receive the edited photos after a session?</div>
-              <div class="answer">text</div>
+              <div class="answer" v-if="showAnswer">text</div>
             </div>
-            <img class="arrow" src="~assets/image/arrow-upper.svg">
+            <img class="arrow" @click="toggleArrow" :src="imageUrl">
           </div>
         </div>
       </div>
@@ -320,8 +321,8 @@
         </div>
         <div class="btn-container">
           <div class="small-btn-container">
-            <img class="left-arrow-btn" src="~assets/image/left-arrow.svg">
-            <img class="right-arrow-btn" src="~assets/image/right-arrow.svg">
+            <img class="arrow-left-btn" src="~assets/image/arrow-left.svg">
+            <img class="arrow-right-btn" src="~assets/image/arrow-right.svg">
           </div>
           <nuxt-link to="/portfolio-page">
             <div class="testimonial-btn">View All Testimonials -></div>
@@ -330,79 +331,100 @@
       </div>
       <div class="bottom">
         <div class="review-item">
-        <div class="header">
-          <div class="header-text">
-            <div class="header-name">Emily Johnson</div>
-            <div class="header-place">USA, California</div>
+          <div class="header">
+            <div class="header-text">
+              <div class="header-name">Emily Johnson</div>
+              <div class="header-place">USA, California</div>
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="~assets/image/facebook.png" />
+              <img class="logo" src="~assets/image/twitter.png" />
+              <img class="logo" src="~assets/image/linkedin.png" />
+            </div>
           </div>
-          <div class="logo-wrapper">
-            <img class="logo" src="~assets/image/facebook.png" />
-            <img class="logo" src="~assets/image/twitter.png" />
-            <img class="logo" src="~assets/image/linkedin.png" />
+          <div class="star-container">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
           </div>
+          <div class="body">Damien's photography doesn't just capture moments; it captures emotions. Hes work is simply
+            mesmerizing.</div>
         </div>
-        <div class="star-container">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
+        <div class="review-item">
+          <div class="header">
+            <div class="header-text">
+              <div class="header-name">John Smith</div>
+              <div class="header-place">USA, California</div>
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="~assets/image/facebook.png" />
+              <img class="logo" src="~assets/image/twitter.png" />
+              <img class="logo" src="~assets/image/linkedin.png" />
+            </div>
+          </div>
+          <div class="star-container">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+          </div>
+          <div class="body">Damien has an incredible talent for making every event feel effortless, and the results
+            speak for themselves.</div>
         </div>
-        <div class="body">Damien's photography doesn't just capture moments; it captures emotions. Hes work is simply
-          mesmerizing.</div>
+        <div class="review-item">
+          <div class="header">
+            <div class="header-text">
+              <div class="header-name">Samantha Davis</div>
+              <div class="header-place">USA, California</div>
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="~assets/image/facebook.png" />
+              <img class="logo" src="~assets/image/twitter.png" />
+              <img class="logo" src="~assets/image/linkedin.png" />
+            </div>
+          </div>
+          <div class="star-container">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+            <img class="star-yellow" src="~assets/image/star-yellow.svg">
+          </div>
+          <div class="body">I was blown away by Damien's ability to capture the essence of our wedding day. Hes
+            photographs are our memories.</div>
+        </div>
       </div>
-      <div class="review-item">
-        <div class="header">
-          <div class="header-text">
-            <div class="header-name">John Smith</div>
-            <div class="header-place">USA, California</div>
-          </div>
-          <div class="logo-wrapper">
-            <img class="logo" src="~assets/image/facebook.png" />
-            <img class="logo" src="~assets/image/twitter.png" />
-            <img class="logo" src="~assets/image/linkedin.png" />
-          </div>
-        </div>
-        <div class="star-container">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-        </div>
-        <div class="body">Damien has an incredible talent for making every event feel effortless, and the results speak for themselves.</div>
-      </div>
-      <div class="review-item">
-        <div class="header">
-          <div class="header-text">
-            <div class="header-name">Samantha Davis</div>
-            <div class="header-place">USA, California</div>
-          </div>
-          <div class="logo-wrapper">
-            <img class="logo" src="~assets/image/facebook.png" />
-            <img class="logo" src="~assets/image/twitter.png" />
-            <img class="logo" src="~assets/image/linkedin.png" />
-          </div>
-        </div>
-        <div class="star-container">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          <img class="star-yellow" src="~assets/image/star-yellow.svg">
-        </div>
-        <div class="body">I was blown away by Damien's ability to capture the essence of our wedding day. Hes photographs are our memories.</div>
-      </div>
-      </div>
-      
+
     </div>
   </div>
 </template>
 
 <script>
+import arrowDownImage from '@/assets/image/arrow-down.svg';
+import arrowUpperImage from '@/assets/image/arrow-upper.svg';
+
 export default {
-  name: 'Home'
-}
+  data() {
+    return {
+      imageUrl: arrowDownImage,
+      showAnswer: false
+    };
+  },
+  methods: {
+    toggleArrow() {
+      if (this.imageUrl = arrowDownImage) {
+        this.imageUrl = arrowUpperImage;
+      } else {
+        this.imageUrl = arrowDownImage;
+      }
+
+      this.showAnswer = !this.showAnswer;
+    }
+  }
+};
 </script>
 
 <style>
@@ -800,12 +822,12 @@ export default {
     background: var(--Dark-03, #070708);
   }
 
-  .home .section4 .left-arrow-btn,
-  .home .section4 .right-arrow-btn,
-  .home .section5 .left-arrow-btn,
-  .home .section5 .right-arrow-btn,
-  .home .section7 .left-arrow-btn,
-  .home .section7 .right-arrow-btn {
+  .home .section4 .arrow-left-btn,
+  .home .section4 .arrow-right-btn,
+  .home .section5 .arrow-left-btn,
+  .home .section5 .arrow-right-btn,
+  .home .section7 .arrow-left-btn,
+  .home .section7 .arrow-right-btn {
     display: flex;
     padding: 10px;
     align-items: center;
@@ -1050,8 +1072,8 @@ export default {
     /* 36px */
   }
 
-  .home .section7 .bottom{
-    display:flex;
+  .home .section7 .bottom {
+    display: flex;
     gap: 20px;
     margin-top: 100px;
   }
@@ -1089,7 +1111,7 @@ export default {
     height: 20px;
   }
 
-  .home .review-item .body{
+  .home .review-item .body {
     font-size: 18px;
   }
 
