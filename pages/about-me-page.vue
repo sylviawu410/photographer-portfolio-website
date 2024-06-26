@@ -40,15 +40,23 @@
                     </div>
                     <div class="bottom">
                         <div class="title">My Biography</div>
-                        <div class="text">Damien Braun's love affair with photography began at a young age, nurtured by the captivating landscapes and vibrant cultures surrounding her in the heart of the USA. Her passion for storytelling through imagery led her to embark on a photography journey that has spanned over 15 years.
-Driven by an insatiable curiosity to explore the beauty in everyday moments, Damien has honed her craft meticulously. Her background in digital media provided her with a solid foundation, but it's her keen eye for detail and an innate ability to capture raw emotions that truly set her apart.
-Damien's journey is more than just taking pictures; it's about capturing the essence of the human spirit, the fleeting magic of nature, and the emotions that define our lives. With each click of her camera, she weaves stories that transcend time and space.</div>
+                        <div class="text">Damien Braun's love affair with photography began at a young age, nurtured by
+                            the captivating landscapes and vibrant cultures surrounding her in the heart of the USA. Her
+                            passion for storytelling through imagery led her to embark on a photography journey that has
+                            spanned over 15 years.
+                            Driven by an insatiable curiosity to explore the beauty in everyday moments, Damien has
+                            honed her craft meticulously. Her background in digital media provided her with a solid
+                            foundation, but it's her keen eye for detail and an innate ability to capture raw emotions
+                            that truly set her apart.
+                            Damien's journey is more than just taking pictures; it's about capturing the essence of the
+                            human spirit, the fleeting magic of nature, and the emotions that define our lives. With
+                            each click of her camera, she weaves stories that transcend time and space.</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="section2">
-            
+            <div>testing</div>
         </div>
     </div>
 </template>
@@ -102,7 +110,7 @@ Damien's journey is more than just taking pictures; it's about capturing the ess
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     z-index: 2;
     width: 100%
@@ -163,26 +171,29 @@ Damien's journey is more than just taking pictures; it's about capturing the ess
     text-transform: uppercase;
 }
 
-.about-me-page .section1 .bottom{
+.about-me-page .section1 .bottom {
     margin-top: 80px;
     display: flex;
-padding: 60px 0px;
-flex-direction: column;
-align-items: flex-start;
-gap: 30px;
-align-self: stretch;
-border-top: 1px solid var(--Dark-12, #1C1C21);
-border-bottom: 1px solid var(--Dark-12, #1C1C21);
+    padding: 60px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+    border-top: 1px solid var(--Dark-12, #1C1C21);
+    border-bottom: 1px solid var(--Dark-12, #1C1C21);
 }
 
-.about-me-page .section1 .bottom .title{
+.about-me-page .section1 .bottom .title {
     color: var(--Grey-50, #797C86);
-font-size: 34px;
-font-weight: 600;
-text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.about-me-page .section1 .bottom .text {
+.about-me-page .section1 .bottom .text {}
 
+.about-me-page .section2{
+    display: flex;
+    justify-content: flex-start;
 }
 </style>

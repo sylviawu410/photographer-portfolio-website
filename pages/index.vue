@@ -277,7 +277,7 @@
         <div class="btn-container">
           <div class="small-btn-container">
             <img class="arrow-left-btn" src="~assets/image/arrow-left.svg">
-            <img class="arrow-right-btn" src="~assets/image/arrow-right.svg">
+            <img class="arrow-right-btn" @click="nextReview" src="~assets/image/arrow-right.svg">
           </div>
           <nuxt-link to="/portfolio-page">
             <div class="testimonial-btn">View All Testimonials -></div>
@@ -285,11 +285,11 @@
         </div>
       </div>
       <div class="bottom">
-        <div class="review-item">
+        <div class="review-item" v-for="(review, index) in client_reviews" :key="index">
           <div class="header">
             <div class="header-text">
-              <div class="header-name">Emily Johnson</div>
-              <div class="header-place">USA, California</div>
+              <div class="header-name">{{ review.name }}</div>
+              <div class="header-place">{{ review.place }}</div>
             </div>
             <div class="logo-wrapper">
               <img class="logo" src="~assets/image/facebook.png" />
@@ -304,52 +304,7 @@
             <img class="star-yellow" src="~assets/image/star-yellow.svg">
             <img class="star-yellow" src="~assets/image/star-yellow.svg">
           </div>
-          <div class="body">Damien's photography doesn't just capture moments; it captures emotions. Hes work is simply
-            mesmerizing.</div>
-        </div>
-        <div class="review-item">
-          <div class="header">
-            <div class="header-text">
-              <div class="header-name">John Smith</div>
-              <div class="header-place">USA, California</div>
-            </div>
-            <div class="logo-wrapper">
-              <img class="logo" src="~assets/image/facebook.png" />
-              <img class="logo" src="~assets/image/twitter.png" />
-              <img class="logo" src="~assets/image/linkedin.png" />
-            </div>
-          </div>
-          <div class="star-container">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          </div>
-          <div class="body">Damien has an incredible talent for making every event feel effortless, and the results
-            speak for themselves.</div>
-        </div>
-        <div class="review-item">
-          <div class="header">
-            <div class="header-text">
-              <div class="header-name">Samantha Davis</div>
-              <div class="header-place">USA, California</div>
-            </div>
-            <div class="logo-wrapper">
-              <img class="logo" src="~assets/image/facebook.png" />
-              <img class="logo" src="~assets/image/twitter.png" />
-              <img class="logo" src="~assets/image/linkedin.png" />
-            </div>
-          </div>
-          <div class="star-container">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-            <img class="star-yellow" src="~assets/image/star-yellow.svg">
-          </div>
-          <div class="body">I was blown away by Damien's ability to capture the essence of our wedding day. Hes
-            photographs are our memories.</div>
+          <div class="body">{{ review.text }}</div>
         </div>
       </div>
 
@@ -415,6 +370,33 @@ export default {
         }
 
       ],
+      client_reviews:[
+        {
+          name: 'Emily Johnson',
+          place: 'USA, California',
+          text: 'Damien\'s photography doesn\'t just capture moments; it captures emotions. Hes work is simply mesmerizing.'
+
+        },
+        {
+          name: 'John Smith',
+          place: 'USA, California',
+          text: 'Damien has an incredible talent for making every event feel effortless, and the results speak for themselves.'
+
+        },
+        {
+          name: 'Samantha Davis',
+          place: 'USA, California',
+          text: 'I was blown away by Damien\'s ability to capture the essence of our wedding day. Hes photographs are our cherished memories.'
+
+        },
+        {
+          name: 'Amy Chan',
+          place: 'USA, California',
+          text: 'Nice service.'
+
+        },
+
+      ]
       
     };
   },
@@ -427,7 +409,15 @@ export default {
         item.imageUrl = arrowDownImage;
       }
       item.showAnswer = !item.showAnswer;
+    },
+    nextReview(){
+      this.moveLeft()
+    },
+
+    moveLeft(){
+      this
     }
+
   }
 };
 </script>
@@ -1082,6 +1072,8 @@ export default {
     display: flex;
     gap: 20px;
     margin-top: 100px;
+    width: 1265px;
+    overflow: hidden;
   }
 
   .home .section7 .review-item {
@@ -1093,7 +1085,7 @@ export default {
     border-radius: 10px;
     border: 1px solid var(--Dark-12, #1C1C21);
     background: var(--Dark-06, #0E0E10);
-    max-width: 406.333px;
+    max-width: 346.333px;
   }
 
   .home .section7 .review-item .header {
