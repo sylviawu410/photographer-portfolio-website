@@ -276,7 +276,7 @@
         </div>
         <div class="btn-container">
           <div class="small-btn-container">
-            <img class="arrow-left-btn" src="~assets/image/arrow-left.svg">
+            <img class="arrow-left-btn" @click="previousReview" src="~assets/image/arrow-left.svg">
             <img class="arrow-right-btn" @click="nextReview" src="~assets/image/arrow-right.svg">
           </div>
           <nuxt-link to="/portfolio-page">
@@ -285,7 +285,7 @@
         </div>
       </div>
       <div class="bottom">
-        <div class="review-item" v-for="(review, index) in client_reviews" :key="index">
+        <div class="review-item" v-for="(review, index) in client_reviews" :key="index" v-show = "index >= activeSlide && index < activeSlide + 3">
           <div class="header">
             <div class="header-text">
               <div class="header-name">{{ review.name }}</div>
@@ -396,7 +396,8 @@ export default {
 
         },
 
-      ]
+      ],
+      activeSlide: 0
       
     };
   },
@@ -410,14 +411,18 @@ export default {
       }
       item.showAnswer = !item.showAnswer;
     },
-    nextReview(){
-      this.moveLeft()
+
+    previousReview(){
+      if(this.activeSlide > 0){
+        this.activeSlide --;
+      }
     },
 
-    moveLeft(){
-      this
+    nextReview(){
+      if(this.activeSlide + 3 < this.client_reviews.length){
+        this.activeSlide++;
+      }
     }
-
   }
 };
 </script>
@@ -1078,6 +1083,7 @@ export default {
 
   .home .section7 .review-item {
     display: flex;
+    flex: 0 0 33.33%;
     padding: 30px;
     flex-direction: column;
     align-items: flex-start;
