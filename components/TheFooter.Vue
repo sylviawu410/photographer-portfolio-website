@@ -51,9 +51,15 @@
             <div class="container-right">
                 <div class="container-right-box">
                     <div class="container-right-heading">Home</div>
-                    <div class="container-right-text">About Me</div>
-                    <div class="container-right-text">My Works</div>
-                    <div class="container-right-text">Testimonials</div>
+                    <nuxt-link to="/about-me-page">
+                        <div class="container-right-text">About Me</div>
+                    </nuxt-link>
+                    <nuxt-link to="/protfolio-page">
+                        <div class="container-right-text">My Works</div>
+                    </nuxt-link>
+                    <nuxt-link to="/services-page">
+                        <div class="container-right-text">Testimonials</div>
+                    </nuxt-link>
                 </div>
 
                 <div class="container-right-box">
@@ -222,6 +228,12 @@
     .footer h1 {
         float: left;
         clear: none;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
     }
 
     .footer .purple-btn {
