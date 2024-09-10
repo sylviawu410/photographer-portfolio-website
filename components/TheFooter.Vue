@@ -54,7 +54,7 @@
                     <nuxt-link to="/about-me-page">
                         <div class="container-right-text">About Me</div>
                     </nuxt-link>
-                    <nuxt-link to="/protfolio-page">
+                    <nuxt-link to="/portfolio-page">
                         <div class="container-right-text">My Works</div>
                     </nuxt-link>
                     <nuxt-link to="/services-page">
@@ -72,17 +72,15 @@
 
                 <div class="container-right-box">
                     <div class="container-right-heading">Portfolio</div>
-                    <div class="container-right-text">Events</div>
-                    <div class="container-right-text">Portrait</div>
-                    <div class="container-right-text">Branding</div>
-                    <div class="container-right-text">Commerciale</div>
-                    <div class="container-right-text">Wedding</div>
+                    <nuxt-link to="/portfolio-page#Events"><div class="container-right-text">Events</div></nuxt-link>
+                    <nuxt-link to="/portfolio-page#Portrait"><div class="container-right-text">Portrait</div></nuxt-link>
+                    <nuxt-link to="/portfolio-page#Commerciale"><div class="container-right-text">Commerciale</div></nuxt-link>
                 </div>
                 <div class="container-right-box">
                     <div class="container-right-heading">Services</div>
-                    <div class="container-right-text">Portraits</div>
-                    <div class="container-right-text">Events</div>
-                    <div class="container-right-text">Commercial</div>
+                    <nuxt-link to="/services-page#Portraits"><div class="container-right-text">Portraits</div></nuxt-link>
+                    <nuxt-link to="/services-page#Events"><div class="container-right-text">Events</div></nuxt-link>
+                    <nuxt-link to="/services-page#Commercial"><div class="container-right-text">Commercial</div></nuxt-link>
                 </div>
             </div>
             <div class="background-right"><img src="~assets/image/background.png" /></div>
